@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Kevin's Little Quilt Implementation</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Kevin's Little Quilt Implementation</h1>
+    
+    <p>This is my implementation using JavaScript of Ravi Seth's "Little Quilt" toy language. Every object in Little Quilt is a "quilt" with a width, a height, and a pattern. Little Quilt has two primitive objects: "a" and "b", each of which is a 1x1 quilt. Little Quilt also has two primitive operations: "turn", which rotates a quilt 90 degrees clockwise, and "sew", which joins one quilt to another quilt of the same height. All quilts can be built out of these primitives.</p>
+
+
+	<div id="savedQuilts" class="contentbox" align="center">
+        <div style="font-weight: bold; font-size: 1.4em">Saved Quilts</div>
+    </div>
+    
+    <div id="controls" class="contentbox" align="center">
+        <button onclick="saveQuilt(currentQuilt)">Save</button>
+        <button onclick="turnQuilt()">Turn</button>
+        <button onclick="sewQuilt()">Sew</button>
+        <button onclick="unturnQuilt()">Unturn</button>
+        <button onclick="pinwheelQuilt()">Pinwheel</button>
+        <button onclick="pileQuilt()">Pile</button>
+        <button onclick="tileQuilt()">Tile</button>
+    </div>
+    
+    <p></p>
+    
+    <div id="quilt" align="center">
+        <canvas id="quiltCanvas" width=800 height=800 style="border:3px solid black;">
+        Sorry, your browser does not support the HTML canvas. Try another browser.
+        </canvas>
+    </div>
+
+    <p>©2019 Kevin Roche</p>
+    <script src="littlequilt.js"></script>
+
+</body>
+
+</html>
